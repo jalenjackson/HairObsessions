@@ -23,36 +23,7 @@ Spree.config do |config|
   # above the inventory_cache_threshold that is set. Default is to invalidate cache on
   # any inventory changes.
   # config.inventory_cache_threshold = 3
-  attachment_config = {
-
-      s3_credentials: {
-          access_key_id:     'AKIAICZGIELRIX3OROGA',
-          secret_access_key: '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',
-          bucket:            'hairobsessionz'
-      },
-
-      storage:        :s3,
-      s3_headers:     { "Cache-Control" => "max-age=31557600" },
-      s3_protocol:    "https",
-      bucket:         'hairobsessionz',
-      url:            ":s3_domain_url",
-
-      styles: {
-          mini:     "48x48>",
-          small:    "100x100>",
-          product:  "240x240>",
-          large:    "600x600>"
-      },
-
-      path:           "/:class/:id/:style/:basename.:extension",
-      default_url:    "/:class/:id/:style/:basename.:extension",
-      default_style:  "product"
-  }
-
-  attachment_config.each do |key, value|
-    Spree::Image.attachment_definitions[:attachment][key.to_sym] = value
-  end
-
+ 
 
   # Frontend:
 
