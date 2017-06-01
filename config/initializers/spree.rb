@@ -26,15 +26,15 @@ Spree.config do |config|
   attachment_config = {
 
       s3_credentials: {
-          access_key_id:     ENV['AWS_ACCESS_KEY_ID'],
-          secret_access_key: ENV['AWS_SECRET_ACCESS_KEY'],
-          bucket:            ENV['S3_BUCKET_NAME']
+          access_key_id:     'AKIAJRQJVKFLARJ4AHGA',
+          secret_access_key: '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',
+          bucket:            'hairobsessionz'
       },
 
       storage:        :s3,
       s3_headers:     { "Cache-Control" => "max-age=31557600" },
       s3_protocol:    "https",
-      bucket:         ENV['S3_BUCKET_NAME'],
+      bucket:         'hairobsessionz',
 
       styles: {
           mini:     "48x48>",
