@@ -42,8 +42,8 @@
       <file leaf-file-name="spree.rb" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/config/initializers/spree.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="257">
-              <caret line="36" column="37" lean-forward="false" selection-start-line="36" selection-start-column="37" selection-end-line="36" selection-end-column="37" />
+            <state relative-caret-position="281">
+              <caret line="37" column="34" lean-forward="false" selection-start-line="37" selection-start-column="34" selection-end-line="37" selection-end-column="34" />
               <folding />
             </state>
           </provider>
@@ -615,12 +615,12 @@
       <option name="presentableId" value="Default" />
       <updated>1496261799162</updated>
       <workItem from="1496261800453" duration="629000" />
-      <workItem from="1496263865832" duration="6620000" />
+      <workItem from="1496263865832" duration="6806000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="7249000" />
+    <option name="totallyTimeSpent" value="7435000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1280" height="800" extended-state="0" />
@@ -1007,8 +1007,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/config/initializers/spree.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="257">
-          <caret line="36" column="37" lean-forward="false" selection-start-line="36" selection-start-column="37" selection-end-line="36" selection-end-column="37" />
+        <state relative-caret-position="281">
+          <caret line="37" column="34" lean-forward="false" selection-start-line="37" selection-start-column="34" selection-end-line="37" selection-end-column="34" />
           <folding />
         </state>
       </provider>

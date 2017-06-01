@@ -35,6 +35,8 @@ Spree.config do |config|
       s3_headers:     { "Cache-Control" => "max-age=31557600" },
       s3_protocol:    "https",
       bucket:         'hairobsessionz',
+      url:            "us-east-1",
+
 
       styles: {
           mini:     "48x48>",
