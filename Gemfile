@@ -12,6 +12,7 @@ gem 'jquery-rails'
 gem 'turbolinks', '~> 5'
 gem 'jbuilder', '~> 2.5'
 gem 'bootstrap-sass'
+gem 'aws-sdk'
 
 # Solidus and Solidus Authentication
 gem 'solidus', '~> 2.0'
