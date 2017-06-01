@@ -23,7 +23,7 @@ Spree.config do |config|
   # above the inventory_cache_threshold that is set. Default is to invalidate cache on
   # any inventory changes.
   # config.inventory_cache_threshold = 3
-  
+
 
 
   # Frontend:
