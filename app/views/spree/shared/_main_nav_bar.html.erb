@@ -1,18 +1,2 @@
-<style>
-  .cart-info{
-    color:white !important;
-  }
-</style>
-<nav class="columns sixteen">
-  <ul id="main-nav-bar" class="inline" data-hook>
-    <li id="link-to-cart" data-hook>
-      <noscript>
-        <%= link_to Spree.t(:cart), spree.cart_path %>
-      </noscript>
-      &nbsp;
-    </li>
-  </ul>
-  <script>Spree.fetch_cart('<%= j spree.cart_link_path %>')</script>
-</nav>
 
 
