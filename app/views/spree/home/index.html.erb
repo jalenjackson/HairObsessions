@@ -1,0 +1,188 @@
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.css">
+<style>
+  .headerImage{
+    position: absolute;
+    top: -60px;
+    left:0;
+    width: 100%;
+    height:700px;
+    overflow: hidden;
+    z-index:-999;
+  }
+
+  #header{
+    background: none !important;
+  }
+
+  .slick-initialized .slick-slide {
+    display: block;
+    filter: alpha(opacity=40);
+    opacity: 0.4;
+    -webkit-transition: all 0.3s ease-out;
+    transition: all 0.3s ease-out;
+  }
+
+  .slick-initialized .slick-center {
+    display: block;
+    filter: alpha(opacity=100);
+    opacity: 1;
+    -webkit-transition: all 0.3s ease-out;
+    transition: all 0.3s ease-out;
+  }
+
+  .wrapper {
+    width: 100%;
+    margin: 0 auto;
+  }
+  .wrapper h2 {
+    color: #3498DB;
+    opacity: .85;
+    font-family: 'Pacifico';
+    font-weight: 100;
+    letter-spacing: 1px;
+    font-size: 36px;
+    margin: 15px 0;
+  }
+
+  .slick-codepen {
+    width: 100%;
+    height: 500px;
+    background-color: #141414;
+  }
+  .slick-codepen .slick-slide {
+    height: 500px !important;
+  }
+  .slick-codepen .slick-slide img {
+    margin: 0;
+    padding: 0;
+    display: block;
+    height: auto;
+    transform:translateY(-100px);
+  }
+  .slick-codepen .slick-prev {
+    left: 0;
+  }
+  .slick-codepen .slick-next {
+    right: 0;
+  }
+  .slick-codepen .slick-prev, .slick-codepen .slick-next {
+    background-color: transparent;
+    top: 10px;
+    width: 20%;
+    height: 100%;
+    -webkit-transition: all 0.3s ease-out 0s;
+    transition: all 0.3s ease-out 0s;
+  }
+  .slick-codepen .slick-prev:hover, .slick-codepen .slick-next:hover {
+    background-color: rgba(0, 0, 0, 0.25);
+  }
+  .slick-codepen .slick-prev:hover:before, .slick-codepen .slick-next:hover:before {
+    color: rgba(255, 255, 255, 0.65);
+  }
+  .slick-codepen .slick-prev:before, .slick-codepen .slick-next:before {
+    font-size: 38px;
+    color: transparent;
+    -webkit-transition: all 0.3s ease-out;
+    transition: all 0.3s ease-out;
+  }
+  .slick-codepen .slick-dots {
+    width: 22%;
+    left: 40%;
+    bottom: -68px;
+    border-bottom: 1px solid #3498DB;
+    padding: 15px 0;
+  }
+  .slick-codepen .slick-dots li.slick-active button:before {
+    color: #3498DB;
+    margin-top: 1px;
+    font-size: 10px;
+  }
+
+  @media screen and (max-width: 480px) {
+    .slick-codepen, .slick-codepen .slick-slide {
+      height: 220px;
+    }
+
+    .wrapper {
+      width: 100%;
+    }
+  }
+
+  .head-img{
+    width: 100%;
+    height:auto;
+  }
+
+
+
+</style>
+
+<div class="headerImage">
+  <div class="wrapper">
+    <div class="slick-codepen">
+      <div>
+        <img src="assets/thumbnail__MG_7917.jpg" />
+        1
+      </div>
+
+      <div>
+        <img src="assets/thumbnail__MG_7863.jpg" />
+        2
+      </div>
+
+      <div>
+        <img src="assets/thumbnail__MG_7841.jpg" />
+        3
+      </div>
+
+      <div>
+        <img src="assets/thumbnail__MG_7917.jpg" />
+        4
+      </div>
+
+      <div class="slick-slide">
+        <img src="assets/thumbnail__MG_79082.jpg" />
+        5
+      </div>
+    </div>
+  </div>
+</div>
+<% content_for :sidebar do %>
+    <div style="margin-top:240px;" data-hook="homepage_sidebar_navigation">
+      <%= render partial: 'spree/shared/taxonomies' %>
+    </div>
+<% end %>
+
+<div style="margin-top:240px;" data-hook="homepage_products">
+  <% cache(cache_key_for_products) do %>
+      <%= render partial: 'spree/shared/products', locals: { products: @products } %>
+  <% end %>
+</div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.js"></script>
+<script>
+    $(".headerImage").appendTo("body");
+    $(".img2").hide();
+    $(".img3").hide();
+    $(".img4").hide();
+
+    $('.slick-codepen').slick({
+        draggable: false,
+        accessibility: true,
+        centerMode: true,
+        variableWidth: true,
+        slidesToShow: 1,
+        speed: 800,
+        swipeToSlide: true,
+        infinite: true,
+        autoplay: true,
+        autoplaySpeed: 1900,
+        pauseOnHover: false,
+        pauseOnFocus: false,
+        focusOnSelect: false,
+    });
+
+
+
+
+
+</script>
