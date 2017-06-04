@@ -187,9 +187,45 @@
         display: none;
       }
 
+      .header{
+        background:red;
+      }
+
     #header{
-      background:none !important;
+      background:black !important;
     }
+    .headerImage{
+      position: absolute;
+      top: -60px;
+      left:0;
+      width: 100%;
+      height:400px;
+      overflow: hidden;
+      z-index:-999;
+      background:rgb(80,80,80);
+      color:black !important;
+    }
+
+      h1{
+        color:pink !important;
+      }
+
+      h6{
+        z-index: 999;
+        margin-top:20px !important;
+      }
+
+      #checkout-step-address > li {
+        color:pink !important;
+      }
+
+      .alpha{
+        background:none !important;
+      }
+
+
+
+
   </style>
 
 
@@ -201,6 +237,10 @@
   <%= render partial: 'spree/shared/header' %>
 
 <br><br>
+
+  <div class="headerImage">
+
+  </div>
 <div style="margin-top:200px;" class="container  animated fadeInUp">
   <div id="wrapper" class="row" data-hook>
 
