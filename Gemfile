@@ -19,6 +19,10 @@ gem 'paperclip'
 gem 'solidus', '~> 2.0'
 gem 'solidus_auth_devise'
 
+gem "solidus_braintree"
+
+
+
 group :development, :test do
   gem 'rspec-rails', '~> 3.5'
 end

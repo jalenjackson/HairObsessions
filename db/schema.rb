@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170531203773) do
+ActiveRecord::Schema.define(version: 20170608032513) do
 
   create_table "friendly_id_slugs", force: :cascade do |t|
     t.string   "slug",                      null: false
@@ -151,6 +151,7 @@ ActiveRecord::Schema.define(version: 20170531203773) do
     t.integer  "payment_method_id"
     t.boolean  "default",                     default: false, null: false
     t.integer  "address_id"
+    t.text     "data"
     t.index ["payment_method_id"], name: "index_spree_credit_cards_on_payment_method_id"
     t.index ["user_id"], name: "index_spree_credit_cards_on_user_id"
   end
@@ -302,6 +303,7 @@ ActiveRecord::Schema.define(version: 20170531203773) do
     t.integer  "store_id"
     t.string   "approver_name"
     t.boolean  "frontend_viewable",                                          default: true,    null: false
+    t.text     "braintree_device_data"
     t.index ["approver_id"], name: "index_spree_orders_on_approver_id"
     t.index ["bill_address_id"], name: "index_spree_orders_on_bill_address_id"
     t.index ["completed_at"], name: "index_spree_orders_on_completed_at"
